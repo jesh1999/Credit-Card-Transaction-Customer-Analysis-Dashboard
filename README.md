@@ -1,4 +1,7 @@
 # **📊Credit-Card-Transaction-Customer-Analysis-Dashboard**
+To develop a comprehensive credit card weekly dashboard that provides real-time insights into key performance metrics and trends, enabling stakeholders to monitor and analyze credit card operations effectively.
+
+
 This project involves the creation of interactive Power BI dashboards to analyze credit card transaction data and customer insights. These dashboards aim to provide an overview of key metrics, trends, and customer segmentation, helping stakeholders understand spending behaviors and revenue drivers across various customer demographics.
 **🎯 Project Objectives**
 Credit Card Transaction Analysis 🏦: The "Credit Card Transaction Report" dashboard offers a snapshot of transaction volumes, interest, and revenue by card type and spending categories.
