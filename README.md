@@ -1,123 +1,136 @@
-# **📊Credit-Card-Transaction-Customer-Analysis-Dashboard**
-To develop a comprehensive credit card weekly dashboard that provides real-time insights into key performance metrics and trends, enabling stakeholders to monitor and analyze credit card operations effectively.
+---
 
+# **📊 Credit Card Transaction & Customer Analysis Dashboard**  
+### Real-Time Insights that Power Smarter Financial Decisions  
 
-This project involves the creation of interactive Power BI dashboards to analyze credit card transaction data and customer insights. These dashboards aim to provide an overview of key metrics, trends, and customer segmentation, helping stakeholders understand spending behaviors and revenue drivers across various customer demographics.
-**🎯 Project Objectives**
-Credit Card Transaction Analysis 🏦: The "Credit Card Transaction Report" dashboard offers a snapshot of transaction volumes, interest, and revenue by card type and spending categories.
-It enables:
+This project showcases an interactive **Power BI dashboard** designed to monitor **weekly credit card operations**, uncover **customer spending patterns**, and reveal **revenue-driving segments** across various demographics.
 
+It bridges **business intelligence** with **customer insights**, enabling stakeholders to track transactions, analyze card performance, and personalize strategies for better engagement and profitability.
 
+---
 
-![image](https://github.com/user-attachments/assets/b6ef6a25-fa52-493a-bd08-7acf81f4cbe2)
+### 🎯 **Project Objectives**
 
+**Credit Card Transaction Report**  
+Provides a quick snapshot of:
+- 💳 Transaction volume and revenue by card type (Gold, Silver, Blue, Platinum)  
+- 💸 Spending categories (Bills, Entertainment, Fuel, Travel, etc.)  
+- 📈 Quarterly transaction trends and revenue spikes  
+- 🎓 Revenue breakdown by **education level** and **job roles**
 
+![Card Type Revenue](https://github.com/user-attachments/assets/b6ef6a25-fa52-493a-bd08-7acf81f4cbe2)  
+*Visual: Transaction Revenue by Card Type and Category*
 
-![image](https://github.com/user-attachments/assets/b4de88a6-e7a8-4ba9-ae49-f905e5fb45ee)
+---
 
-Identifying the most profitable card types (Gold, Silver, Blue, Platinum) 💳.
-Observing quarterly revenue and transaction count trends 📈.
-Segmenting revenue based on expenditure categories like Bills, Entertainment, Fuel, etc. 💸.
-Analyzing revenue by customer education levels and job roles 👩‍🎓👨‍💼.
-**Customer Segmentation Analysis👥:**
-The "Credit Card Customer Report" dashboard explores customer profiles to better understand demographics, income groups, and preferences. It focuses on:
+**Customer Segmentation Report**  
+Dives deeper into:
+- 🧑‍🤝‍🧑 Customer income groups, age brackets, marital status, and dependents  
+- 🏫 Education vs. revenue contribution  
+- 👨‍💼 Job roles with highest earnings  
+- 🗺️ Top 5 revenue-generating states  
 
-Tracking revenue and income by age, income group, marital status, and dependents 👨‍👩‍👦.
-Examining revenue distribution by job roles and education levels 🏫.
-Highlighting the top 5 revenue-generating states across the country 🗺️.
+![Customer Demographics Breakdown](https://github.com/user-attachments/assets/b4de88a6-e7a8-4ba9-ae49-f905e5fb45ee)  
+*Visual: Revenue by Customer Age, Education, and Region*
 
-**📈 Key Metrics and KPIs**
-Revenue 💰: Total revenue from credit card transactions.
-Total Interest 📊: Interest generated from credit card usage.
-Transaction Count 🔢: Number of transactions within the specified period.
-Income 🏦: Aggregated income from various customer groups.
-CSS (Customer Satisfaction Score) ⭐: Average satisfaction score based on customer interactions.
+---
 
-**🔍 Data Breakdown**
+### 📈 **Key Metrics Tracked**
+| KPI                     | Description                                |
+|------------------------|--------------------------------------------|
+| 💰 **Total Revenue**         | From fees, interest, and transactions      |
+| 📊 **Total Interest**        | Generated from credit usage               |
+| 🔢 **Transaction Count**     | Total number of transactions              |
+| 🏦 **Income**                | Aggregated across all customer groups     |
+| ⭐ **CSS (Customer Satisfaction Score)** | Based on interactions and feedback |
 
-**1.Credit Card Transaction Report 💳**
-**Card Types:** Breakdown by Blue, Gold, Platinum, and Silver cards.
-**Quarterly Analysis📅:** Sum of revenue and transaction count by quarter (Q1 to Q4).
-Revenue by Expenditure Type: Categories like Bills, Entertainment, Fuel, Grocery, Food, and Travel.
-Revenue by Education Level: Graduate, High School, Uneducated, Post-Graduate, Doctorate 🎓.
-Revenue by Customer Job 👨‍💻: Segmentation by job roles (Businessman, White-collar, Self-employed, Govt, Retirees).
-Revenue by Chip Type 💳: Analysis by transaction type (Swipe, Chip, Online).
+---
 
-**2. Credit Card Customer Report 👥**
-Revenue Trends 📅: Monthly trends based on gender and daily spending patterns.
-Demographics 🧑‍🤝‍🧑: Analysis by age groups (20-30, 30-40, 40-50), income levels (High, Medium, Low), marital status, and dependents.
-Job and Education Revenue 🎓👔: Breakdown of revenue by job roles and education levels.
-Top 5 States 🏢: Geographical distribution of revenue from the top-performing states.
-**🛠️ Tools and Technologies**
-Power BI 📊: For creating interactive and visually appealing dashboards.
-DAX (Data Analysis Expressions) 🧮: Used for calculated fields, measures, and dynamic filtering.
-Data Cleaning and Transformation 🧼: Data pre-processed to ensure accurate and reliable insights.
+### 🧮 **DAX Queries & Measures**
 
-**🎨 Visual Elements**
-Bar Charts 📊: Represent revenue by card type, customer job, and education level.
-Line Graphs 📈: Time-series analysis of revenue trends by gender.
-Cards & KPIs 📲: Display key metrics like revenue, total interest, transaction count, and CSS.
-Tables 📋: Detailed breakdowns of revenue and transaction metrics by customer demographics.
-
-**📊 Insights Derived**
-Top Revenue-Generating Segments: Identified high-revenue customer segments, job roles, and card types.
-Spending Patterns: Insights into spending behaviors across demographics.
-Quarterly Growth Trends 📅: Observed seasonal patterns in revenue.
-Geographical Distribution 🗺️: States contributing the highest revenue, allowing for targeted marketing and retention strategies.
-
-**📌 How to Use the Dashboards**
-Filter Options 🔍: Use filters for quarter, gender, card type, transaction method, and expenditure type for drill-downs.
-Hover for Details 🖱️: Hover over elements to view exact revenue figures and transaction counts.
-Dynamic Comparison 📊: Compare metrics across customer segments (e.g., age, income, job) for deeper insights.
-
-**DAX Queries**
-
-
+```DAX
 AgeGroup = SWITCH(
-TRUE(),
-'public cust_detail'[customer_age] < 30, "20-30",
-'public cust_detail'[customer_age] >= 30 && 'public cust_detail'[customer_age] < 40, "30-40",
-'public cust_detail'[customer_age] >= 40 && 'public cust_detail'[customer_age] < 50, "40-50",
-'public cust_detail'[customer_age] >= 50 && 'public cust_detail'[customer_age] < 60, "50-60",
-'public cust_detail'[customer_age] >= 60, "60+",
-"unknown"
+ TRUE(),
+ 'public cust_detail'[customer_age] < 30, "20-30",
+ 'public cust_detail'[customer_age] >= 30 && 'public cust_detail'[customer_age] < 40, "30-40",
+ 'public cust_detail'[customer_age] >= 40 && 'public cust_detail'[customer_age] < 50, "40-50",
+ 'public cust_detail'[customer_age] >= 50 && 'public cust_detail'[customer_age] < 60, "50-60",
+ 'public cust_detail'[customer_age] >= 60, "60+",
+ "unknown"
 )
 
 IncomeGroup = SWITCH(
-TRUE(),
-'public cust_detail'[income] < 35000, "Low",
-'public cust_detail'[income] >= 35000 && 'public cust_detail'[income] <70000, "Med",
-'public cust_detail'[income] >= 70000, "High",
-"unknown"
+ TRUE(),
+ 'public cust_detail'[income] < 35000, "Low",
+ 'public cust_detail'[income] >= 35000 && 'public cust_detail'[income] <70000, "Med",
+ 'public cust_detail'[income] >= 70000, "High",
+ "unknown"
 )
+```
 
-***
-
+```DAX
 week_num2 = WEEKNUM('public cc_detail'[week_start_date])
 Revenue = 'public cc_detail'[annual_fees] + 'public cc_detail'[total_trans_amt] + 'public cc_detail'[interest_earned]
+
 Current_week_Reveneue = CALCULATE(
-SUM('public cc_detail'[Revenue]),
-FILTER(
-ALL('public cc_detail'),
-'public cc_detail'[week_num2] = MAX('public cc_detail'[week_num2])))
+ SUM('public cc_detail'[Revenue]),
+ FILTER(ALL('public cc_detail'), 'public cc_detail'[week_num2] = MAX('public cc_detail'[week_num2]))
+)
+
 Previous_week_Reveneue = CALCULATE(
-SUM('public cc_detail'[Revenue]),
-FILTER(
-ALL('public cc_detail'),
-'public cc_detail'[week_num2] = MAX('public cc_detail'[week_num2])-1))
+ SUM('public cc_detail'[Revenue]),
+ FILTER(ALL('public cc_detail'), 'public cc_detail'[week_num2] = MAX('public cc_detail'[week_num2]) - 1)
+)
+```
 
+---
 
+### 🔍 **Key Insights Unlocked**
+- 📌 **Gold cards** bring the highest revenue  
+- 🎓 Graduates and **white-collar professionals** dominate earnings  
+- 🧑‍🤝‍🧑 Income level *does* influence spending behavior  
+- 🗺️ Top states reveal potential for targeted campaigns  
+- 🔁 Seasonal revenue spikes show room for marketing optimization
 
+---
 
-**🚀 Future Enhancements**
-Predictive Modeling 🔮: Incorporate forecasting to predict future spending patterns and revenue growth.
-Customer Segmentation 👥: Refine customer segments for targeted marketing.
-Enhanced Filtering 📊: Add more granular filters to explore insights in greater detail.
+### 🛠️ **Tools & Technologies Used**
+- **Power BI** for building dashboards  
+- **DAX** for dynamic filtering and calculations  
+- **Data Transformation** using Power Query  
 
-**📂 Project Files**
-Power BI File (.pbix) 📊: Contains both dashboards with interactive filters.
-Documentation 📝: Step-by-step guide on data preparation, transformation, and visualization setup.
+---
 
-**🏁 Conclusion**
-These dashboards provide a holistic view of credit card transactions and customer demographics, enabling stakeholders to make informed decisions. Power BI’s interactive features allow users to explore different customer segments, monitor key revenue metrics, and derive actionable insights for business growth and customer satisfaction.
+### 🎨 **Visual Highlights**
+- 📊 **Bar Charts:** Revenue by card type, job roles  
+- 📈 **Line Graphs:** Time-series patterns  
+- 📋 **Tables:** Detailed breakdowns by age, education, income  
+- 📲 **Cards & KPIs:** Snapshot of real-time performance  
 
+---
+
+### 📌 **Interactive Features**
+- 🔍 Drilldowns by card type, income group, gender, region  
+- 📅 Filter by quarter or transaction method  
+- 🖱️ Hover tooltips for revenue comparisons  
+- 📊 Dynamic views to compare performance across segments  
+
+---
+
+### 🚀 **Future Enhancements**
+- 🔮 **Forecasting:** Use time-series models to predict transaction spikes  
+- 👥 **Deeper Segmentation:** For hyper-personalized campaigns  
+- 📊 **Granular Filters:** Add slicers for chip type, frequency, and lifestyle preferences  
+
+---
+
+### 📂 **Project Files**
+- `.pbix` Dashboard File: Interactive with filters and DAX  
+- 📄 Documentation: Data cleaning steps, transformations, measures  
+
+---
+
+### 🏁 **Conclusion**  
+This dashboard simplifies complex credit card and customer data into an easy-to-navigate solution. With rich visual insights and drilldown features, decision-makers can **spot patterns**, **segment audiences**, and **optimize revenue strategies**—all in real-time.  
+
+---
